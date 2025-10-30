@@ -27,4 +27,16 @@ public class DanceRoutine {
 
         return routineInString;
     }
+
+    public String remixRoutine() {
+        StringBuilder Routine = new StringBuilder();
+        Routine.insert(0, "--- REMIX ---\n");
+        Routine.append(buildRoutine());
+        Routine.delete(Routine.length() - 1,Routine.length());
+        Routine.append("\n(Backwards Boohbah Shuffle!)");
+        Routine.reverse();
+
+        return Routine.toString();
+    }
+
 }
